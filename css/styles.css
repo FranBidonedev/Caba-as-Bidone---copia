@@ -10,33 +10,16 @@
   padding: 0;
 }
 
-.grilla {
-  display: grid;
-  grid-template-rows: 1fr 2fr 1fr 3fr;
-  grid-template-areas: "header" "portada" "info" "footer";
-  row-gap: 0.5%;
-  width: 100%;
+li {
+  list-style: none;
 }
 
 body {
-  overflow-x: hidden;
+  background-image: url("../img/fondo.png..");
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
   font-family: "Edu TAS Beginner", cursive;
   text-align: center;
-  background-image: url("../img/fondo.png..");
-}
-
-header {
-  grid-area: header;
-  background-color: rgba(173, 216, 230, 0.6);
-  display: flex;
-}
-
-li {
-  list-style: none;
 }
 
 .titulo {
@@ -44,30 +27,34 @@ li {
 }
 
 /*anidacion*/
-header .logo {
-  flex: 1;
-  padding-top: 4%;
+header {
+  display: flex;
+  justify-content: space-between;
 }
-
-nav {
-  flex: 1;
-}
-
-.opciones {
-  text-decoration: none;
-  -webkit-text-decoration-style: none;
-  text-decoration-style: none;
+header li {
   list-style: none;
+  display: inline-block;
+}
+header li a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
 }
 
 .portada {
-  grid-area: portada;
-  background-color: rgba(145, 238, 145, 0.5);
-}
-
-section {
   display: grid;
   grid-template-areas: "img img img";
+  gap: 1rem;
+  margin:1rem;
+}
+.portada img {
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+.card {
+  width: 25rem;
 }
 
 .fotos {
@@ -94,12 +81,6 @@ section {
   overflow: hidden;
 }
 
-.fotitos {
-  flex: 1;
-  width: 100%;
-  height: 180px;
-}
-
 .menu {
   display: flex;
   justify-content: space-between;
@@ -114,55 +95,18 @@ table {
   border: 2px solid black;
 }
 
-.info {
-  grid-area: info;
-  background-image: url(../img/fondomadera.png);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.InfoIzquierda {
-  flex: 1;
-}
-
-.InfoDerecha {
-  flex: 1;
+.info li {
+  font-size: 3rem;
 }
 
 footer {
-  grid-area: footer;
-  background-color: rgba(145, 238, 145, 0.5);
+  background-color: aqua;
   display: flex;
-  justify-content: space-evenly;
-  text-align: center;
+  justify-content: center;
+  gap: 10%;
 }
-
-.footer-izquierda {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-centro {
-  flex: 1;
-}
-
-.footer-derecha {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-footer {
-  padding-top: 20%;
-}
-
-.menu-footer .opciones {
-  text-decoration: none;
-  -webkit-text-decoration-style: none;
-  text-decoration-style: none;
-  list-style: none;
+footer img {
+  width: 10%;
 }
 
 .social {
@@ -186,6 +130,8 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
+
 
 .cobeceraDos {
   flex: 1;
@@ -214,166 +160,9 @@ footer {
   font-weight: bold;
 }
 
-@media (max-width: 320px) {
-  .grilla {
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr 3fr;
-    grid-template-areas: "header" "portada" "info" "footer";
-    row-gap: 20px;
-  }
-  header {
-    grid-area: header;
-    background-color: lightgreen;
-    display: flex;
-    flex-direction: column;
-  }
-  .titulo {
-    padding-bottom: 100px;
-    font-size: 30px;
-  }
-  /*anidacion*/
-  header .logo {
-    flex: 1;
-  }
-  table {
-    margin: 0 auto;
-    text-align: center;
-    border: 2px solid black;
-  }
-  nav {
-    flex: 1;
-  }
-  .portada {
-    grid-area: portada;
-    grid-template-areas: "img img img";
-    background-color: rgba(145, 238, 145, 0.5);
-    align-items: center;
-    padding: 30px;
-    display: flex;
-  }
-  .fotos {
-    display: flex;
-    justify-content: center;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
-    padding: 30px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    row-gap: 10px;
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  .info {
-    grid-area: info;
-    background-image: url(../img/fondomadera.png);
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  footer {
-    grid-area: footer;
-    background-color: rgba(145, 238, 145, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .footer-derecha {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-  }
-  .social {
-    width: 50px;
-    height: 40px;
-  }
-  .footer-izquierda {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media (max-width: 560px) {
-  .grilla {
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr 3fr;
-    grid-template-areas: "header" "portada" "info" "footer";
-    row-gap: 20px;
-  }
-  header {
-    grid-area: header;
-    background-color: rgba(145, 238, 145, 0.5);
-    display: flex;
-    flex-direction: column;
-  }
-  .titulo {
-    padding-bottom: 10px;
-    font-size: 30px;
-  }
-  header .logo {
-    flex: 1;
-  }
-  nav {
-    flex: 1;
-  }
-  .portada {
-    grid-area: portada;
-    background-color: rgba(145, 238, 145, 0.5);
-    align-items: center;
-    padding: 30px;
-    display: flex;
-  }
-  .fotos {
-    display: flex;
-    justify-content: center;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
-    padding: 30px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    row-gap: 10px;
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  .info {
-    grid-area: info;
-    background-image: url(../img/fondomadera.png);
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-}
-footer {
-  grid-area: footer;
-  background-color: rgba(145, 238, 145, 0.5);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-derecha {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
+.social {
+  width: 50px;
+  height: 40px;
 }
 
 .social {
@@ -381,97 +170,62 @@ footer {
   height: 40px;
 }
 
-.footer-izquierda {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+@media (max-width: 768px) {
+  .portada {
+    display: grid;
+    grid-template-areas: "imagen";
+  }
+}
+.titulo {
+  font-size: 30px;
 }
 
-@media (max-width: 768px) {
-  .grilla {
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr 3fr;
-    grid-template-areas: "header" "portada" "info" "footer";
-    row-gap: 20px;
-  }
-  header {
-    grid-area: header;
-    background-color: rgba(145, 238, 145, 0.5);
-    display: flex;
-    flex-direction: column;
-  }
-  .titulo {
-    padding-bottom: 10px;
-    font-size: 30px;
-  }
-  header .logo {
-    flex: 1;
-  }
-  nav {
-    flex: 1;
-  }
-  .portada {
-    grid-area: portada;
-    background-color: rgba(145, 238, 145, 0.5);
-    align-items: center;
-    padding: 30px;
-    display: flex;
-  }
-  .fotos {
-    display: flex;
-    justify-content: center;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
-    padding: 30px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    row-gap: 10px;
-  }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  .info {
-    grid-area: info;
-    background-image: url(../img/fondomadera.png);
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  footer {
-    grid-area: footer;
-    background-color: rgba(145, 238, 145, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .footer-derecha {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-  }
-  .social {
-    width: 50px;
-    height: 40px;
-  }
-  .footer-izquierda {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
+header .logo {
+  flex: 1;
 }
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  padding: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.info {
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.info li {
+  color: blue;
+}
+
+.social {
+  width: 50px;
+  height: 40px;
+}
+
 /* Codigo mapa */
-@media (max-width: 320px) {
-  img {
-    width: 200px;
-    height: 200px;
-  }
-} /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
+img {
+  width: 200px;
+  height: 200px;
+}
+
+/*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */

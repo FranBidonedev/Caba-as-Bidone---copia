@@ -8,27 +8,18 @@
 li{list-style: none;}
 
 body {
-  background-image: url("../img/fondo.png..");
+  background-image: url("../img/fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
-
   font-family: "Edu TAS Beginner", cursive;
   text-align: center;
-
 }
-
-
-
-
-
 .titulo {
   font-size: 240%;
 }
 
 /*anidacion*/
 header {
- 
-  
   display: flex;
   justify-content: space-between;
 
@@ -49,7 +40,7 @@ header {
   grid-template-areas: "img img img";
   gap:1rem;
 
-  img{width: 90%;
+  img{width: 92%;
       margin:0 auto;
       border: 2px solid black;
       }
@@ -78,15 +69,18 @@ header {
   transform: scale(1.1);
   overflow: hidden;
 }
-
-
-
 .menu {
   display: flex;
   justify-content: space-between;
   padding-right: 10%;
   height: 100%;
   margin-top: 10%;
+}
+.menu-footer {
+  text-align: start;
+}
+.experienciaU {
+  text-align: center;
 }
 
 table {
@@ -96,21 +90,16 @@ table {
 }
 
 .info {
- 
-   
-  li{font-size: 3rem;}
+  li{font-size: 2rem;}
 }
-
-
-
 footer {
-  background-color: aqua;
+  background-color: rgb(0, 255, 149);
   display: flex;
-  justify-content: center;
-  gap: 10%;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
   img {
-    width: 60%;
+    width: 10%;
   }
 }
 
@@ -136,8 +125,7 @@ footer {
   flex-direction: column;
 }
 
-.card {width: 20rem;} 
-
+.card {width: 100%;} 
 
 .cobeceraDos {
   flex: 1;
@@ -166,30 +154,22 @@ footer {
   font-weight: bold;
 }
 
-
 .social {
   width: 50px;
   height: 40px;
 }
 
-
 .social {
   width: 50px;
   height: 40px;
 }
-
-
 
 @media (max-width: 768px) {
   .portada{
     display: grid;
     grid-template-areas: "imagen";
+  } 
   }
-
- 
-    
-  }
-
 
   .titulo {
    
@@ -199,10 +179,6 @@ footer {
   header .logo {
     flex: 1;
   }
-
- 
-
-
 
   .fotos {
     display: flex;
@@ -226,8 +202,7 @@ footer {
   }
 
   .info {
-   
-    background-color:lightgrey;
+    background-color:lightgreen;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -236,13 +211,10 @@ footer {
     li{color:blue}
   }
 
-
   .social {
     width: 50px;
     height: 40px;
   }
-
-
 
 /* Codigo mapa */
 
@@ -250,6 +222,4 @@ footer {
     width: 200px;
     height: 200px;
   }
-
-
 /*# sourceMappingURL=styles.css.map */

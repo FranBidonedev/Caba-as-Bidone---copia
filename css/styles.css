@@ -1,6 +1,6 @@
-.experienciaU {
+.info ul li {
   color: rgb(10, 20, 10);
-  font-size: 30px;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -15,7 +15,7 @@ li {
 }
 
 body {
-  background-image: url("../img/fondo.png..");
+  background-image: url("../img/fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Edu TAS Beginner", cursive;
@@ -46,15 +46,11 @@ header li a {
   display: grid;
   grid-template-areas: "img img img";
   gap: 1rem;
-  margin:1rem;
 }
 .portada img {
-  width: 90%;
+  width: 92%;
   margin: 0 auto;
   border: 2px solid black;
-}
-.card {
-  width: 25rem;
 }
 
 .fotos {
@@ -89,6 +85,14 @@ header li a {
   margin-top: 10%;
 }
 
+.menu-footer {
+  text-align: start;
+}
+
+.experienciaU {
+  text-align: center;
+}
+
 table {
   margin: 0 auto;
   text-align: center;
@@ -96,14 +100,14 @@ table {
 }
 
 .info li {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 footer {
-  background-color: aqua;
+  background-color: rgb(0, 255, 149);
   display: flex;
-  justify-content: center;
-  gap: 10%;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 footer img {
   width: 10%;
@@ -131,7 +135,9 @@ footer img {
   flex-direction: column;
 }
 
-
+.card {
+  width: 100%;
+}
 
 .cobeceraDos {
   flex: 1;
@@ -206,7 +212,7 @@ header .logo {
 }
 
 .info {
-  background-color: lightgrey;
+  background-color: lightgreen;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;

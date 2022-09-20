@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+  .portada {
+    display: grid;
+    grid-template-areas: "imagen";
+  }
+}/*# sourceMappingURL=media.css.map */

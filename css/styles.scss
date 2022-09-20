@@ -63,6 +63,21 @@ header {
   filter: grayscale(20%);
   transition: all 3s;
 }
+.fondoQuienesSomos{
+  background-color: rgb(1, 235, 137);
+  opacity: 70%;
+  
+}
+h2 {
+  color: rgb(14, 0, 0);
+  opacity: 100%;
+  z-index: 2;
+}
+h3 {
+  color: rgb(14, 0, 0);
+  opacity: 100%;
+  z-index: 2;
+}
 
 .fotosIndividuales:hover {
   filter: grayscale(0);
@@ -94,6 +109,7 @@ table {
 }
 footer {
   background-color: rgb(0, 255, 149);
+  opacity: 84%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -163,14 +179,6 @@ footer {
   width: 50px;
   height: 40px;
 }
-
-@media (max-width: 768px) {
-  .portada{
-    display: grid;
-    grid-template-areas: "imagen";
-  } 
-  }
-
   .titulo {
    
     font-size: 30px;
@@ -203,18 +211,18 @@ footer {
 
   .info {
     background-color:lightgreen;
+    opacity: 84%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    li{color:blue}
   }
 
-  .social {
-    width: 50px;
-    height: 40px;
+  i {
+    font-size: 4rem;
   }
+  
 
 /* Codigo mapa */
 
@@ -223,3 +231,20 @@ footer {
     height: 200px;
   }
 /*# sourceMappingURL=styles.css.map */
+
+/*Mediascueries*/
+@import "media.scss";
+
+$redes: (
+  instagram: pink,
+  facebook: blue,
+  whatsapp: green
+  
+);
+
+@each $redsocial, $colordered in $redes {
+  .fa-#{$redsocial} {
+    background-color: $colordered;
+  }
+  
+}
